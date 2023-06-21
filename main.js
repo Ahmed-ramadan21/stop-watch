@@ -4,18 +4,23 @@ var sec = 0;
 var count = 0;
 
 var timer = false;
+let ptnStart = document.getElementById("start")
 
 function start() {
   timer = true;
+  ptnStart.setAttribute("disabled", "")
   stopWatch();
 }
 
 function stop() {
   timer = false;
+  ptnStart.removeAttribute("disabled")
 }
 
 function reset() {
   timer = false;
+  ptnStart.removeAttribute("disabled")
+
 
   hr = 0;
   min = 0;
